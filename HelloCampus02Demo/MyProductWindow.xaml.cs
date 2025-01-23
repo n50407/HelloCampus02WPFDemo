@@ -23,5 +23,25 @@ namespace HelloCampus02Demo
         {
             InitializeComponent();
         }
+
+        private void AddCheckBox(object sender, RoutedEventArgs e)
+        {
+            //deklarativ
+            //<StackPanel x:Name="MyLastStackPanel">
+            //<CheckBox IsChecked="true" Background="Yellow">Dummy</CheckBox>
+            //Prozedural
+            CheckBox myNewCheckbox = new CheckBox();
+            myNewCheckbox.Content = "Dummy";
+            myNewCheckbox.IsChecked = true;
+            myNewCheckbox.Background = new SolidColorBrush(Color.FromArgb(255, 255, 100, 0));
+            MyLastStackPanel.Children.Add(myNewCheckbox);
+
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

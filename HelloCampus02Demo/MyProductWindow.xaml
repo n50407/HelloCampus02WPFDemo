@@ -6,8 +6,12 @@
         xmlns:local="clr-namespace:HelloCampus02Demo"
         mc:Ignorable="d"
         Title="MyProductWindow" Height="450" Width="800">
+    <Window.Resources>
+        <!--logische Ressource nur für DIESES Window-->
+        <SolidColorBrush x:Key="MeineLieblingsfarbe" Color="Blue"></SolidColorBrush>
+    </Window.Resources>
     <DockPanel>
-        <Menu DockPanel.Dock="Top">
+        <Menu DockPanel.Dock="Top" Background="{StaticResource MeineLieblingsfarbe}">
             <MenuItem Header="_File">
                 <MenuItem Header="_New" />
                 <MenuItem Header="_Open" />
@@ -60,7 +64,13 @@
                 <ListBoxItem>Bekleidung</ListBoxItem>
                 <ListBoxItem>IT</ListBoxItem>
                 <ListBoxItem>Kommunikation</ListBoxItem>
-            </ListBox>            
+            </ListBox>
+            <RepeatButton>Test</RepeatButton>
+            <Button Click="Button_Click"></Button>
+            <Button Click="AddCheckBox">Erzeuge eine Checkbox mit Bezeichnung Dummy</Button>
+            <StackPanel x:Name="MyLastStackPanel">
+                <CheckBox Background="Yellow" IsChecked="true">Dummy</CheckBox>
+            </StackPanel>
         </StackPanel>
     </DockPanel>
 </Window>
