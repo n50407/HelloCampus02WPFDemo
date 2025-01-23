@@ -1,0 +1,69 @@
+﻿<Window x:Class="HelloCampus02Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloCampus02Demo"
+        mc:Ignorable="d"
+        Title="Hello Donnerstag V2" Height="600" Width="800">
+    <DockPanel>
+        <Canvas>
+            <Button Canvas.Bottom="20" Canvas.Left="10">Hallo</Button>
+        </Canvas>
+        <StackPanel>
+            <Button>b1</Button>
+            <Button>b1</Button>
+        </StackPanel>
+        <Button>
+            <Button.Content>
+                <StackPanel>
+                    <Label>Hello World</Label>
+                    <Label>Ciao</Label> 
+                </StackPanel>
+            </Button.Content>
+        </Button>
+    <Grid>
+    <StackPanel>
+        <Button Background="Beige" Click="Button_Click">Hello World V1sdfasd</Button>
+        <Button Background="Yellow" Click="Button_Click_1">Hallo Welt</Button>
+        <Button Content="Hallo Campus02" Click="HelloCampus02Cllick">            
+        </Button>
+        <Button Content="Button"/>
+        <Button>einfache Variante - Content ist Default Property</Button>
+        <Button Background="red" Content="explizit über Property den Content"></Button>
+        <Button Background="CadetBlue">
+            <Button.Content><!--Element Property Syntax-->
+                <StackPanel>
+                    <Label Background="Green">A1</Label>
+                    <Label Background="Blue">A2</Label>
+                </StackPanel>              
+            </Button.Content>
+        </Button>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!--Attached Properties, werden vom Grid vererbt_-->
+            <Label Grid.Row="0" Grid.Column="0" >Vorname</Label>
+            <TextBox  Grid.Row="0" Grid.Column="1" Text="Bitte hier Vorname"></TextBox>
+            <Label  Grid.Row="1" Grid.Column="0">Nachname</Label>
+            <TextBox  Grid.Row="1" Grid.Column="1" Text="Bitte hier Nachname"></TextBox>
+            
+        </Grid>
+                <CheckBox Content="Lieferung Express"></CheckBox>
+                <CheckBox>Lieferung Normal</CheckBox>
+                <CheckBox>
+                    <CheckBox.Content><!--Property Element Syntax-->
+                        <Image Source="/Slow.jpg" />
+                    </CheckBox.Content>
+                </CheckBox>
+
+            </StackPanel>
+    </Grid>
+    </DockPanel>
+</Window>
