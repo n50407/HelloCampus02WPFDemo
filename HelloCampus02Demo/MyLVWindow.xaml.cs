@@ -33,7 +33,7 @@ namespace HelloCampus02Demo
             this.DataContext = myLV; //VM
 
 
-            //Staatenbezeichnung -- AT / DE / CH
+            //Staatenbezeichnung -- AT / DE / CH /USA
             //Sprache -- DE / EN / FR
             //Bevölkerungsgröße ---> Slider / TextBox
             //ToogleButton -- "gedrückt wenn bei der EU

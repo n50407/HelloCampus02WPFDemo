@@ -1,0 +1,49 @@
+﻿<Window x:Class="HelloCampus02Demo.Views.XAMLBeispiel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloCampus02Demo.Views"
+        mc:Ignorable="d"
+        Title="ein neuer Titel" Height="600" Width="800">
+    <StackPanel>
+        <StackPanel.Children>
+            <Button Content="{Binding Hallo}"/><!--simples Databinding-->
+            <TextBlock Background="{Binding NiceColor}">Hallo</TextBlock>
+            
+            <Button>Hello</Button><!--Default Property-->
+            <Button Content="Hello"></Button><!--Property Syntax-->
+            <Button Click="AddCheckBox_EventHandler">
+                <Button.Content><!--Element Property Syntax-->
+                    <StackPanel x:Name="myFirstPanel">
+                    <TextBlock>Block 1</TextBlock>
+                    <TextBlock>Block 2</TextBlock>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        <TextBlock Text="Guten Morgen">
+        </TextBlock>
+            <TextBlock Text="Guten Morgen"/>
+            <CheckBox Content="Wochenende"></CheckBox>
+        
+        <Expander Header="Meine Gruppe">
+            <StackPanel>
+                <Button>Hello</Button>
+            </StackPanel>
+        </Expander>
+            <ListBox>
+                <ListBoxItem>Montag</ListBoxItem>
+                <ListBoxItem>Dienstag</ListBoxItem>
+            </ListBox>
+
+            <!--Complex Databinding-->
+            <ListBox ItemsSource="{Binding Wochentage}">                
+            </ListBox>
+            <ComboBox ItemsSource="{Binding Wochentage}">
+            </ComboBox>
+
+
+        </StackPanel.Children>
+    </StackPanel>
+        
+    </Window>
