@@ -7,11 +7,14 @@
         mc:Ignorable="d"
         Title="MyStaatenWindow" Height="450" Width="800">
     <StackPanel>
-        <TextBox Text="{Binding name}"></TextBox>
+        <TextBox Text="{Binding Name}"></TextBox>
         <TextBox Text="{Binding Sprache}"></TextBox>
         <TextBox Text="{Binding Bevölkerung}"></TextBox>
         <Slider Minimum="0" Maximum="100000000" Value="{Binding Bevölkerung}"/>
         <CheckBox IsChecked="{Binding EU}"/>
         <ToggleButton Content="Ist in EU oder nicht" IsChecked="{Binding EU}"/>
+        <Label>Glückszahl</Label>
+        <TextBlock FontSize="50" FontStyle="Italic" Foreground="Green">37</TextBlock>
+        <Button>Neue Glückszahl</Button>
     </StackPanel>
 </Window>
