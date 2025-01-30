@@ -37,8 +37,13 @@ namespace HelloCampus02Demo.Models
 			get { return _AufLager; }
 			set { _AufLager = value; }
 		}
+		private double _Preis;
 
-
+		public double Preis
+		{
+			get { return _Preis; }
+			set { _Preis = value; }
+		}
 
 
 	}
