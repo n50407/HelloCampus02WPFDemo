@@ -35,13 +35,17 @@
                 </ListBox>
                 <!--Deklaratives Databinding-->
                 <ListBox ItemsSource="{Binding WetterListe}"/>
-                <TextBox Text="{Binding AktuelleTemperatur}"/>
-                <Slider Value="{Binding AktuelleTemperatur}" 
+                <TextBox Text="{
+                    Binding AktuelleTemperatur,
+                    UpdateSourceTrigger=PropertyChanged
+                    }"   
+                         />
+                <Slider Value="{Binding AktuelleTemperatur,
+                    UpdateSourceTrigger=PropertyChanged}" 
                         Minimum="-50" 
                         Maximum="60"/>
-
                 <Button Click="CalcRandomTemperatur">Zufällige Temperatur</Button>
-
+                <TextBlock Text="{Binding AktuelleTemperaturFahrenheit}"></TextBlock>
             </StackPanel>
         </StackPanel>
         <WrapPanel DockPanel.Dock="Bottom" x:Name="MyWetterPanel">
