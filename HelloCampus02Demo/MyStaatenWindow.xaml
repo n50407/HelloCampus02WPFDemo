@@ -14,7 +14,7 @@
         <CheckBox IsChecked="{Binding EU}"/>
         <ToggleButton Content="Ist in EU oder nicht" IsChecked="{Binding EU}"/>
         <Label>Glückszahl</Label>
-        <TextBlock FontSize="50" FontStyle="Italic" Foreground="Green">37</TextBlock>
-        <Button>Neue Glückszahl</Button>
+        <TextBlock FontSize="50" Text="{Binding Glueckszahl}" FontStyle="Italic" Foreground="Green"></TextBlock>
+        <Button Click="changeGlueckszahl">Neue Glückszahl</Button>
     </StackPanel>
 </Window>

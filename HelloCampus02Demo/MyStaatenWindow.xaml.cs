@@ -27,8 +27,19 @@ namespace HelloCampus02Demo
             myNewStaat.Sprache = "Deutsch";
             myNewStaat.Bevölkerung = 9000000;
             myNewStaat.EU = true;
+            //Glueckszahl Random zwischen 0 und 100
+            Random rnd = new Random();
+            myNewStaat.Glueckszahl = rnd.Next(0, 101);
+
 
             this.DataContext = myNewStaat;
+        }
+
+        private void changeGlueckszahl(object sender, RoutedEventArgs e)
+        {
+            Staat staat = (Staat)this.DataContext;
+            Random rnd = new Random();
+            staat.Glueckszahl = rnd.Next(0, 101);
         }
     }
 }
