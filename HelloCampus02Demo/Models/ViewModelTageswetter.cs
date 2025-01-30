@@ -25,21 +25,35 @@ namespace HelloCampus02Demo.Models
 
         public List<string> WetterListe { get; set; }
         // public double AktuelleTemperatur { get; set; }
-        private double _AktuelleTemperatur;
+
 
 
         //fahren=celsius * 1.8 + 32
 
-        public double AktuelleTemperaturFahrenheit { get; set; }
+        //public double AktuelleTemperaturFahrenheit { get; set; }
+        private double _aktuelleTemperaturFahrenheit;
 
+        public double AktuelleTemperaturFahrenheit
+        {
+            get { return _aktuelleTemperaturFahrenheit; }
+            //get { return _AktuelleTemperatur * 1.8 + 32;  }
 
+            set { _aktuelleTemperaturFahrenheit = value; }
+        }
+
+        private void SetMeinValue(string value)
+        {
+            var dummy = value;
+        }
+
+        private double _AktuelleTemperatur;
         public double AktuelleTemperatur
         {
             get { return _AktuelleTemperatur; }
             set {
                 //value = celsius
-                _AktuelleTemperatur = value; 
-                AktuelleTemperaturFahrenheit = _AktuelleTemperatur * 1.8 + 32;
+                _AktuelleTemperatur = value;
+                _aktuelleTemperaturFahrenheit = _AktuelleTemperatur * 1.8 + 32;
                 if (PropertyChanged != null)
                 {
                     PropertyChanged(this, 

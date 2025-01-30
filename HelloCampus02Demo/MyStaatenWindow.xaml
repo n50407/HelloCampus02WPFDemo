@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloCampus02Demo"
         mc:Ignorable="d"
+        Background="{Binding GluecksstatusFarbe}"
         Title="MyStaatenWindow" Height="450" Width="800">
     <StackPanel>
         <TextBox Text="{Binding Name}"></TextBox>
@@ -14,7 +15,12 @@
         <CheckBox IsChecked="{Binding EU}"/>
         <ToggleButton Content="Ist in EU oder nicht" IsChecked="{Binding EU}"/>
         <Label>Glückszahl</Label>
-        <TextBlock FontSize="50" Text="{Binding Glueckszahl}" FontStyle="Italic" Foreground="Green"></TextBlock>
+        <TextBlock FontSize="50" Text="{Binding Glueckszahl}" FontStyle="Italic" Foreground="Yellow"></TextBlock>
         <Button Click="changeGlueckszahl">Neue Glückszahl</Button>
+        <TextBlock>größer 50</TextBlock>
+        <TextBlock>>Grüner Hintergrund - gute Glückszahl</TextBlock>
+        <TextBlock>kleiner 50</TextBlock>
+        <TextBlock>>RoterHintergrund - schlechte Glückszahl</TextBlock>
+        <TextBlock Text="{Binding AusgabeGluecksstatus}"></TextBlock>
     </StackPanel>
 </Window>
