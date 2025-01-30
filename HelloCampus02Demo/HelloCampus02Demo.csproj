@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Produkt.cs" />
     <Compile Include="Models\ViewModelTageswetter.cs" />
     <Compile Include="Models\Wiederholung.cs" />
     <Compile Include="MyStaatenWindow.xaml.cs">
@@ -136,6 +137,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Slow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kleinstaat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Gross.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,8 +10,13 @@
     <StackPanel>
         <TextBox Text="{Binding Name}"></TextBox>
         <TextBox Text="{Binding Sprache}"></TextBox>
-        <TextBox Text="{Binding Bevölkerung}"></TextBox>
-        <Slider Minimum="0" Maximum="100000000" Value="{Binding Bevölkerung}"/>
+        <TextBox Text="{Binding Bevoelkerung}"></TextBox>
+        <Slider Minimum="0" Maximum="100000000" Value="{Binding Bevoelkerung}"/>
+        <StackPanel Orientation="Horizontal">
+            <Label>Ausgabe</Label>
+            <Label Content="{Binding AusgabeKleinGross}"></Label>            
+            <Image Width="100" Source="{Binding KleinGross}" />
+        </StackPanel>
         <CheckBox IsChecked="{Binding EU}"/>
         <ToggleButton Content="Ist in EU oder nicht" IsChecked="{Binding EU}"/>
         <Label>Glückszahl</Label>

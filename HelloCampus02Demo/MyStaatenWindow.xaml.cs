@@ -25,7 +25,7 @@ namespace HelloCampus02Demo
             Staat myNewStaat=new Staat();
             myNewStaat.Name = "Österreich";
             myNewStaat.Sprache = "Deutsch";
-            myNewStaat.Bevölkerung = 9000000;
+            myNewStaat.Bevoelkerung = 9000000;
             myNewStaat.EU = true;
             //Glueckszahl Random zwischen 0 und 100
             Random rnd = new Random();
