@@ -62,6 +62,10 @@
       <DependentUpon>MyStaatenWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Staat.cs" />
+    <Compile Include="ViewModels\ProductListViewModel.cs" />
+    <Compile Include="Views\ProduktListWindow.xaml.cs">
+      <DependentUpon>ProduktListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\XAMLBeispiel.xaml.cs">
       <DependentUpon>XAMLBeispiel.xaml</DependentUpon>
     </Compile>
@@ -91,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyStaatenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProduktListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Gross.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wiederholung 06.02.2025.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
