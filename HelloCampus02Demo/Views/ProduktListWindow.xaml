@@ -19,13 +19,17 @@
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem Content="{Binding ProduktAnzahl}"></StatusBarItem>
         </StatusBar>
+        <!--binding in 2 Richtungen -->
+        <!--Werte werden aus ProduktList geholt-->
+        <!-- beim Klick auf ein Produkt wird dies ins Objekt AusgewaehltesProdukt geschrieben-->
         <ListBox DockPanel.Dock="Left"                 
-                 ItemsSource="{Binding ProduktList}">
+                 ItemsSource="{Binding ProduktList}"
+                 SelectedItem="{Binding AusgewaehltesProdukt}"                 
+                 >            
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Background="{Binding Kategorie}">
-                        <TextBlock Text="{Binding Bezeichnung}"/>
-                        <CheckBox IsChecked="{Binding AufLager}"/>
+                        <TextBlock Text="{Binding Bezeichnung}"/>                     
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>            

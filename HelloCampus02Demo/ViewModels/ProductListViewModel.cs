@@ -27,9 +27,22 @@ namespace HelloCampus02Demo.ViewModels
             }
         }
 
-        
 
-         public Produkt AusgewaehltesProdukt { get; set; }
+        //automatic property mit get; set
+        // public Produkt AusgewaehltesProdukt { get; set; }
+
+        //anstelle propfull
+        private Produkt _AusgewaehltesProdukt;
+
+        public Produkt AusgewaehltesProdukt
+        {
+            get { return _AusgewaehltesProdukt; }
+            set { 
+                _AusgewaehltesProdukt = value;
+                InformGUI(nameof(AusgewaehltesProdukt));
+            }
+        }
+
 
         public int ProduktAnzahl
         {
