@@ -9,6 +9,10 @@ namespace HelloCampus02Demo.Models
 {
     internal class Produkt: INotifyPropertyChanged
     {
+        public override string ToString()
+        {
+            return "Hallo - ich bin ein " + Bezeichnung;
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         private int _ProduktID;
@@ -49,7 +53,10 @@ namespace HelloCampus02Demo.Models
 		public bool AufLager
 		{
 			get { return _AufLager; }
-			set { _AufLager = value; }
+			set { 
+				_AufLager = value; 
+
+			}
 		}
 		private double _Preis;     
         public double Preis

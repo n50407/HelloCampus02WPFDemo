@@ -19,13 +19,13 @@
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem Content="{Binding ProduktAnzahl}"></StatusBarItem>
         </StatusBar>
-        <ListBox DockPanel.Dock="Left"
-                 SelectedItem="{Binding AusgewaehltesProdukt}"
+        <ListBox DockPanel.Dock="Left"                 
                  ItemsSource="{Binding ProduktList}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Background="{Binding Kategorie}">
                         <TextBlock Text="{Binding Bezeichnung}"/>
+                        <CheckBox IsChecked="{Binding AufLager}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>            

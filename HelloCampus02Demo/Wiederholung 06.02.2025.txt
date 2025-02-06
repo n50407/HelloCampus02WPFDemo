@@ -1,1 +1,22 @@
 ﻿
+deklaratives DataBinding 
+XAML - Extended Application Markup Language
+Content-Control
+Simples Databinding
+<TextBox Content="{Binding Vorname}"/>
+<TextBox>Sonnig</TextBox>
+<Button Background="{Binding Farbe}"/>
+Background == Property (Dependency)
+<Slider BackColor="{Binding Farbe}" Value="{Binding EinwohnerZahl}"/>
+Complex DataBinding - Liste 
+Montag, Dienstag, Mittwoch -->ListWochentage
+ItemsControls
+<CompoBox
+<Menu
+<ListBox Items={"Bindinng ListWochentage"}
+FontSize="{Binding SchriftGroessse}"
+>
+<ListBox.ListItems>
+<Item>A</Item>
+<Item>B</Item>
+

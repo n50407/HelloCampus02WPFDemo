@@ -36,7 +36,7 @@ namespace HelloCampus02Demo.ViewModels
             get { return _ProduktAnzahl; }
             set {
                 _ProduktAnzahl = value; 
-                InformGUI(nameof(ProduktAnzahl));
+               // InformGUI(nameof(ProduktAnzahl));
             
             }
         }
@@ -46,6 +46,7 @@ namespace HelloCampus02Demo.ViewModels
             //Automatische ChangeNotification weil ObservableCollection
             ProduktList.Add(neuesProdukt);
             ProduktAnzahl = ProduktList.Count;
+            InformGUI(nameof(ProduktAnzahl));
         }
 
 
