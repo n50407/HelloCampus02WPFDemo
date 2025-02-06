@@ -1,0 +1,34 @@
+﻿
+Es soll eine Liste von 3 Horoskopen angezeigt werden
+ComboBox, ListBox -- ItemsControl
+
+Bild, kurze Beschreibung, positive, negative Eigenschaften
+
+Rechte Seite sollen Details angezeigt werden (in der Liste ist nur das Bild sichtbar)
+
+In der Detailsansicht kann ein Rating vorgenommen werden
+
+Statuszeile soll das durchschnittliche Rating angezeigt werden
+
+
+Krebs: 5
+Zwilling: 7
+Löwe: 10
+
+Durchschnittliche Rating: ???  7,3
+
+
+Vorgehen:
+-- neues Fenster -- WPF Fenster
+-- Model-Klasse Horoskop 
+--ViewModel (OvservaleCollection, Durchschnittlichen Punke)
+
+Model
+- Horoskop
+
+viewModel
+- ProductViewModel
+- HoroskopViewModel
+
+
+

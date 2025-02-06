@@ -24,8 +24,7 @@
         <!-- beim Klick auf ein Produkt wird dies ins Objekt AusgewaehltesProdukt geschrieben-->
         <ListBox DockPanel.Dock="Left"                 
                  ItemsSource="{Binding ProduktList}"
-                 SelectedItem="{Binding AusgewaehltesProdukt}"                 
-                 >            
+                 SelectedItem="{Binding AusgewaehltesProdukt}">            
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Background="{Binding Kategorie}">

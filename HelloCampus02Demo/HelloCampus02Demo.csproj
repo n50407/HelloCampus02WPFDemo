@@ -155,5 +155,8 @@
   <ItemGroup>
     <Resource Include="Wiederholung 06.02.2025.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Aufgaben\Horoskop.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
