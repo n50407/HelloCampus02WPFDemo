@@ -28,6 +28,7 @@ namespace HelloCampus02Demo.Sophia
             var horoscopeViewModel =new HoroscopeViewModel();
             horoscopeViewModel.FilteredHoroskops = 
                 new ObservableCollection<Horoscope>();
+            horoscopeViewModel.Suchtext = "";
             horoscopeViewModel.Horoscopes.Add
                 (
                 new Horoscope() { Description="Abc", Name="TEst"}

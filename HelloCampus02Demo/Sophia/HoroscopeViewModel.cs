@@ -34,7 +34,7 @@ namespace HelloCampus02Demo.Sophia
             }
         }
 
-
+        //Persistenz
         public ObservableCollection<Horoscope> Horoscopes { get; set; }
         private Horoscope _selectedHoroscope;
 
