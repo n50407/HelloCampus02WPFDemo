@@ -10,6 +10,31 @@ namespace HelloCampus02Demo.Sophia
 {
     public class HoroscopeViewModel : INotifyPropertyChanged
     {
+        public ObservableCollection<Horoscope> FilteredHoroskops { get; set; }
+
+        private string _Suchtext;
+
+        public string Suchtext
+        {
+            get { return _Suchtext; }
+            set { 
+                _Suchtext = value;
+                var filtered = Horoscopes.Where(h=>h.Name.Contains(value)).ToList();
+                FilteredHoroskops.Clear();
+                foreach (var h in filtered)
+                {
+                    FilteredHoroskops.Add(h);
+                }
+                
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, 
+                        new PropertyChangedEventArgs(nameof(FilteredHoroskops)));
+                }
+            }
+        }
+
+
         public ObservableCollection<Horoscope> Horoscopes { get; set; }
         private Horoscope _selectedHoroscope;
 

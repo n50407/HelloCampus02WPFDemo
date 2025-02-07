@@ -61,6 +61,9 @@
     <Compile Include="MyStaatenWindow.xaml.cs">
       <DependentUpon>MyStaatenWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sophia\FilteredHorosko.xaml.cs">
+      <DependentUpon>FilteredHorosko.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sophia\Horoscope.cs" />
     <Compile Include="Sophia\HoroscopeViewModel.cs" />
     <Compile Include="Sophia\MainWindow.xaml.cs" />
@@ -102,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyStaatenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sophia\FilteredHorosko.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

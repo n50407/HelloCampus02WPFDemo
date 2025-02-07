@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,8 @@ namespace HelloCampus02Demo.Sophia
         {
             InitializeComponent();
             var horoscopeViewModel =new HoroscopeViewModel();
+            horoscopeViewModel.FilteredHoroskops = 
+                new ObservableCollection<Horoscope>();
             horoscopeViewModel.Horoscopes.Add
                 (
                 new Horoscope() { Description="Abc", Name="TEst"}
@@ -33,6 +36,13 @@ namespace HelloCampus02Demo.Sophia
             DataContext = horoscopeViewModel;
 
 
+        }
+
+        private void SearchHoroskopWindow_Click(object sender, RoutedEventArgs e)
+        {
+            FilteredHorosko filteredHoroskoWindow = new FilteredHorosko();
+            filteredHoroskoWindow.DataContext = this.DataContext;
+            filteredHoroskoWindow.Show();
         }
     }
 

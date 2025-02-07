@@ -2,6 +2,13 @@
           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Horoskop App" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datei">
+                <MenuItem Header="Horoskop filtern" Click="SearchHoroskopWindow_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -37,4 +44,5 @@
             <TextBlock Text="{Binding AverageRating}" FontWeight="Bold"/>
         </StatusBar>
     </Grid>
+    </DockPanel>
 </Window>
