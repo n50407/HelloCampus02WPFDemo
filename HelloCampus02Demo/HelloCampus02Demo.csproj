@@ -62,7 +62,11 @@
       <DependentUpon>MyStaatenWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Staat.cs" />
+    <Compile Include="ViewModels\FridayViewModel.cs" />
     <Compile Include="ViewModels\ProductListViewModel.cs" />
+    <Compile Include="Views\BindingSample.xaml.cs">
+      <DependentUpon>BindingSample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ProduktListWindow.xaml.cs">
       <DependentUpon>ProduktListWindow.xaml</DependentUpon>
     </Compile>
@@ -95,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyStaatenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BindingSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
